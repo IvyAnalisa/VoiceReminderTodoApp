@@ -4,10 +4,10 @@ name: CI/CD Pipeline for TODO App
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build:
