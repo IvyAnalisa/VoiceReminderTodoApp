@@ -1,0 +1,145 @@
+/* General Styles */
+* {
+  box-sizing: border-box; /* Ensures consistent padding and borders */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Use a clean font */
+  background-color: #b4d26d; /* Light background color for a clean look */
+  margin: 0;
+  padding: 0;
+}
+
+/* Main App Container */
+.App {
+  text-align: center; /* Center text */
+  max-width: 600px; /* Limit the width of the app */
+  margin: 20px auto; /* Center the app container with margin */
+  padding: 20px; /* Add padding inside the container */
+  background-color: white; /* White background for the app */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Logo Styles */
+.App-logo {
+  height: 40vmin; /* Responsive height */
+  pointer-events: none; /* Disable pointer events on the logo */
+}
+
+/* Animation */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+      animation: App-logo-spin infinite 20s linear; /* Spinning animation */
+  }
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #282c34; /* Dark header background */
+  min-height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin); /* Responsive font size */
+  color: white; /* Text color for header */
+}
+
+/* Link Styles */
+.App-link {
+  color: #61dafb; /* Light blue color for links */
+}
+
+/* Keyframes for Logo Spin Animation */
+@keyframes App-logo-spin {
+  from {
+      transform: rotate(0deg); /* Initial state */
+  }
+  to {
+      transform: rotate(360deg); /* Final state */
+  }
+}
+
+/* Additional Styles for the TODO App */
+/* Title Styles */
+h1 {
+  font-size: 24px; /* Title font size */
+  margin-bottom: 20px; /* Space below title */
+  text-align: center; /* Center the title */
+  color: #2c3e50; /* Darker title color */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Input and Button Styles */
+input[type="text"],
+input[type="datetime-local"] {
+  width: calc(50% - 10px); /* Responsive input width */
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  margin: 0 5px 20px 0; /* Space between inputs */
+  font-size: 16px; /* Input font size */
+}
+
+button {
+  padding: 10px 15px; /* Padding for button */
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Button font size */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Task List Styles */
+ul {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space between items */
+  padding: 10px; /* Padding for each task item */
+  border-bottom: 1px solid #eee; /* Light border at bottom */
+}
+
+li:last-child {
+  border-bottom: none; /* Remove bottom border for last item */
+}
+
+.checkbox {
+  margin-right: 10px; /* Space between checkbox and text */
+}
+
+span {
+  flex-grow: 1; /* Allow text to take remaining space */
+  font-size: 16px; /* Task text font size */
+}
+
+.completed {
+  text-decoration: line-through; /* Strikethrough for completed tasks */
+  color: #999; /* Light gray for completed task text */
+}
+
+/* Delete Button Styles */
+.delete-button {
+  background-color: #dc3545; /* Red button for delete */
+  padding: 5px 10px; /* Padding for button */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  color: white; /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.delete-button:hover {
+  background-color: #3367c8; /* Darker red on hover */
+}
