@@ -27,10 +27,12 @@ jobs:
       # Step 3: Install dependencies
       - name: Install Dependencies
         run: npm install
+        working-directory: ./VoiceReminderTodoApp
 
       # Step 4: Run tests (optional if you have tests)
       - name: Run Tests
         run: npm test
+        working-directory: ./VoiceReminderTodoApp
 
       # Step 5: Build the app
       - name: Build the App
