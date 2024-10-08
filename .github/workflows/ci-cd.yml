@@ -1,6 +1,5 @@
-name: CI/CD Pipeline for TODO App
+name: CI CD for TODO reminder App
 
-# Trigger the workflow on push or pull request to the main branch
 on:
   push:
     branches:
@@ -10,31 +9,40 @@ on:
       - master
 
 jobs:
-  build:
+  frontend:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout the code
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js (you can specify the version)
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-      # Step 3: Install dependencies
-      - name: Install Dependencies
+      - name: Install frontend dependencies
         run: npm install
-        working-directory: ./VoiceReminderTodoApp
+        working-directory: ./todo-frontend  # Point to the frontend directory
 
-      # Step 4: Run tests (optional if you have tests)
-      - name: Run Tests
+      - name: Run frontend tests
         run: npm test
-        working-directory: ./VoiceReminderTodoApp
+        working-directory: ./todo-frontend  # Point to the frontend directory
 
-      # Step 5: Build the app
-      - name: Build the App
-        run: npm run build
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install backend dependencies
+        run: npm install
+        working-directory: ./todo-backend  # Point to the backend directory
+
+      - name: Run backend tests
+        run: npm test
+        working-directory: ./todo-backend  # Point to the backend directory
