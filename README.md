@@ -31,12 +31,12 @@ To get started with the TODO app, follow these steps:
 Install Dependencies: Make sure you have Node.js installed on your machine. Run the following command to install the required dependencies:
 
 bash
-Copy code
+
 npm install
 Start the Application: Once the installation is complete, start the application:
 
 bash
-Copy code
+
 npm start
 Open in Your Browser: Navigate to http://localhost:3000 in your web browser to see the app in action.
 
@@ -60,23 +60,6 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
-Inspired by the need for a simple task management tool.
-Voice reminder feature utilizes the Web Speech API for a hands-free experience.
-vbnet
-Copy code
 
-### Instructions for Use
 
-- **Path to Demo Image**: Update the `![Demo](path/to/your/demo-image.png)` line with an actual path to a screenshot or demo video of your application, or remove the line if you do not wish to include a demo image.
 
-- **GitHub URL**: Replace `https://github.com/yourusername/todo-app.git` with the actual URL of your GitHub repository.
-
-- **License**: If you have a specific license for your project, update the license section accordingly.
-
-### Additional Tips
-
-- Make sure to keep the README file up-to-date as you add new features or make changes to the app.
-- You can also include sections on troubleshooting, FAQs, or advanced features as your application evolves. 
-
-Let me know if you need any adjustments or additional information!
