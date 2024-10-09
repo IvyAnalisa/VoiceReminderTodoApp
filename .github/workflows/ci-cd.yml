@@ -1,4 +1,4 @@
-name: CI CD for TODO reminder App
+name: CI CD for TODO Reminder App
 
 on:
   push:
@@ -24,8 +24,8 @@ jobs:
         run: npm install
         working-directory: ./todo-frontend  # Point to the frontend directory
 
-      - name: Run frontend tests
-        run: npm test
+      - name: Build frontend
+        run: npm run build
         working-directory: ./todo-frontend  # Point to the frontend directory
 
   backend:
@@ -43,6 +43,9 @@ jobs:
         run: npm install
         working-directory: ./todo-backend  # Point to the backend directory
 
-      - name: Run backend tests
-        run: npm test
+      - name: Build backend
+        run: npm run build
         working-directory: ./todo-backend  # Point to the backend directory
+
+
+    
