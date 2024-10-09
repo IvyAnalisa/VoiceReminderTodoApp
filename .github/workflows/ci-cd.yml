@@ -42,10 +42,11 @@ jobs:
       - name: Install backend dependencies
         run: npm install
         working-directory: ./todo-backend  # Point to the backend directory
+        
+        - name: Start backend
+        run: npm start
+        working-directory: ./todo-backend
 
-      - name: Build backend
-        run: npm run build
-        working-directory: ./todo-backend  # Point to the backend directory
-
+    
 
     
